@@ -1,0 +1,32 @@
+<template>
+  <div class="total">
+    <button class="pay-btn">Pay Now</button>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+.total {
+  display: block;
+  width: 100%;
+}
+.pay-btn {
+  background: #fff;
+  border: 1px solid #3a0ca3;
+  color: #3a0ca3;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.pay-btn:hover {
+  background: #3a0ca3;
+  color: #fff;
+}
+</style>

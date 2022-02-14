@@ -1,0 +1,41 @@
+<template>
+  <div>
+    <div class="input-wrapper">
+      <label for="email">Email</label>
+      <input type="email" name="email" />
+    </div>
+    <div class="input-wrapper">
+      <label for="pwd">Password</label>
+      <input type="password" name="pwd" />
+    </div>
+    <div class="link"><a href="javascript:void(0);">Forget password</a></div>
+    <button class="user-btn">Login</button>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: solid #acacac;
+  border-width: 0 0 1px;
+  margin-bottom: 15px;
+  background: #fff;
+}
+.input-wrapper input {
+  border: 0px;
+  font-size: 26px;
+  line-height: 40px;
+}
+.input-wrapper input:focus,
+.input-wrapper input:active,
+.input-wrapper input:focus-visible {
+  border-color: #3a0ca3;
+  outline: none;
+}
+</style>
