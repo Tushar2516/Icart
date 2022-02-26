@@ -19,6 +19,7 @@
           </button>
         </div>
       </h1>
+
       <div class="flex-it pad-130">
         <product-details
           :product="product"
@@ -40,14 +41,16 @@
 import ProductSummaryContainer from "../components/products/ProductSummaryContainer.vue";
 import ProductDetails from "../components/products/ProductDetails.vue";
 
-import items from "../data/items";
+//import items from "../data/items";
+import axios from "axios";
 
 export default {
   name: "Home",
   components: { ProductSummaryContainer, ProductDetails },
   data() {
     return {
-      items: items,
+      //items: items,
+      items: "",
       product: null,
       active: {
         product_detail: false,
@@ -56,7 +59,20 @@ export default {
       isActiveDc: false,
     };
   },
+  created() {
+    this.fetchData();
+  },
   methods: {
+    async fetchData() {
+      axios({
+        method: "GET",
+        url: "http://localhost/API/api.php?request=1",
+      })
+        .then((response) => (this.items = response.data))
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
     viewProduct(product) {
       this.product = product;
       this.active.product_detail = true;
@@ -89,6 +105,9 @@ export default {
   margin: 0;
   padding: 0;
   text-align: initial;
+}
+h1 {
+  text-transform: capitalize;
 }
 .nx-container {
   max-width: 1200px;

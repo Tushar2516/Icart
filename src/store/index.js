@@ -1,8 +1,8 @@
 import { createStore } from 'vuex'
 
-function updateLocalStorage(cart) {
-    localStorage.setItem('cart', JSON.stringify(cart))
-}
+// function updateLocalStorage(cart) {
+//     localStorage.setItem('cart', JSON.stringify(cart))
+// }
 
 export default createStore({
     state: {
@@ -34,7 +34,7 @@ export default createStore({
                 state.cart.push({...product, quantity: 1 });
             }
 
-            updateLocalStorage(state.cart);
+            // updateLocalStorage(state.cart);
         },
         removeItemFromCart(state, product) {
             let item = state.cart.find(i => i.id === product.id)
@@ -46,14 +46,14 @@ export default createStore({
                 }
             }
 
-            updateLocalStorage(state.cart);
+            // updateLocalStorage(state.cart);
         },
-        updateCartFromLocalStorage(state) {
-            const cart = localStorage.getItem('cart')
-            if (cart) {
-                state.cart = JSON.parse(cart)
-            }
-        }
+        // updateCartFromLocalStorage(state) {
+        //     const cart = localStorage.getItem('cart')
+        //     if (cart) {
+        //         state.cart = JSON.parse(cart)
+        //     }
+        // }
     },
     actions: {},
     modules: {}

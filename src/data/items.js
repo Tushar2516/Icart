@@ -1,4 +1,18 @@
-const items = [{
+/*import axios from 'axios';
+
+var items = [];
+axios({
+    method: 'GET',
+    url: 'http://localhost/API/api.php?request=1'
+})
+.then( (response) =>(items = response.data))
+.catch(function (error) {
+    console.log(error);
+  });
+
+*/
+
+/*const items = [{
         id: 1,
         name: "One Tribe Black Edition",
         img: "https://enftymart.themenio.com/img/nft-lg.8f26d1a6.jpg",
@@ -106,6 +120,6 @@ const items = [{
         owner: "ZeniconStudio",
         quantity: 0,
     },
-]
+]*/
 
 export default items

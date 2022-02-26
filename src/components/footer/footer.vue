@@ -14,5 +14,8 @@ export default {};
   text-align: center;
   font-size: 22px;
   text-transform: capitalize;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
 </style>

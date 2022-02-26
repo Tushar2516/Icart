@@ -1,11 +1,17 @@
 <template>
   <div class="total">
-    <button class="pay-btn">Pay Now</button>
+    <input type="submit" value="Pay Now" @click="payMent" class="pay-btn" />
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    payMent() {
+      this.$router.replace("/payment");
+    },
+  },
+};
 </script>
 
 <style>

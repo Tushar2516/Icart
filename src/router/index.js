@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Cart from '../views/Cart.vue'
 import loginPage from '../views/loginPage.vue'
 import About from '../views/About.vue'
+import Payment from '../views/payment.vue'
 
 const routes = [{
         path: '/',
@@ -22,6 +23,11 @@ const routes = [{
         path: '/about',
         name: 'About',
         component: About
+    },
+    {
+        path: '/payment',
+        name: 'Payment',
+        component: Payment
     }
 ]
 
