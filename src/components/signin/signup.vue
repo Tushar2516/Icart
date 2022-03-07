@@ -1,6 +1,10 @@
 <template>
   <div>
+<<<<<<< HEAD
     <form @submit="signup">
+=======
+    <form @submit="signup" method="POST">
+>>>>>>> 4679daf (third commit)
       <div class="sign-up">
         <div class="keep-togeather">
           <div class="input-wrapper">
@@ -53,8 +57,13 @@ export default {
     };
   },
   methods: {
+<<<<<<< HEAD
     async signup() {
       //e.preventDefault();
+=======
+    async signup(e) {
+      e.preventDefault();
+>>>>>>> 4679daf (third commit)
       const user = {
         fname: this.fname,
         lname: this.lname,
@@ -63,12 +72,23 @@ export default {
       };
 
       axios
+<<<<<<< HEAD
         .post(`http://localhost/API/api.php?request=5`, user)
         .then((response) => {
           this.userId = response.data;
           localStorage.setItem("userId", this.userId);
         })
         .catch(function (error) {
+=======
+        .post(`http://localhost/API/api.php?request=register`, user)
+        .then((response) => {
+          //alert(JSON.stringify(response));
+          this.userId = response.register_user_id;
+          localStorage.setItem("userId", this.userId);
+        })
+        .catch(function (error) {
+          //alert("inside error block");
+>>>>>>> 4679daf (third commit)
           console.log(error);
         });
     },

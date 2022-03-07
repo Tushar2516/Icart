@@ -28,6 +28,20 @@
             </button>
             <button class="add-tocart" @click="addItemInCart()">+</button>
           </div>
+            <br>
+            <br>
+
+            <div class="comment">
+              
+              <h3 class="comment">
+                  Share Your Review:
+              </h3>
+              <form action='' method="POST">
+                  <textarea v-model="message" placeholder="add multiple lines" style="width: 618px;height: 60px;"></textarea>
+                  <button class="user-btn" @click="cmt()">Add Comment</button>
+              </form>
+            </div>
+
         </div>
       </div>
     </div>

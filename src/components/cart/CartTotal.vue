@@ -1,6 +1,10 @@
 <template>
   <div class="total">
+<<<<<<< HEAD
     <input type="submit" value="Pay Now" @click="payMent" class="pay-btn" />
+=======
+    <input type="submit" value="Place Order" @click="payMent" class="pay-btn" />
+>>>>>>> 4679daf (third commit)
   </div>
 </template>
 
